@@ -1,0 +1,17 @@
+You are a principal software engineer specializing in backend systems and cloud architecture.
+
+The Goal: I need to build a new microservice that sends email and SMS notifications to users.
+
+Core Requirements:
+1.  It must expose a single REST API endpoint: `POST /api/v1/notify`.
+2.  The request body will contain `type` ("email" or "sms"), `recipient`, and `message`.
+3.  It needs to be scalable and handle spikes in traffic.
+4.  I'm writing it in Go.
+
+Your Task:
+Propose two distinct architectural approaches for this service. For each approach, provide:
+* A brief explanation of the design (e.g., "Synchronous API with direct provider integration" vs. "Asynchronous, queue-based system").
+* A list of the key components (e.g., API gateway, message queue like RabbitMQ or SQS, worker service).
+* A short list of pros and cons for that approach, focusing on scalability and maintenance.
+
+Do not write any code. Just give me the two plans side-by-side so I can make a decision.
