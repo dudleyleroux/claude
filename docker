@@ -1,0 +1,12 @@
+I have a Node.js application in this directory. The entry point is `server.js`.
+
+Write a complete `Dockerfile` for me.
+
+Requirements:
+* Use a slim, official Node.js 20 base image.
+* Use a multi-stage build to keep the final image size small.
+* The first stage should build the project (`npm install` and any other build steps).
+* The final stage should copy only the necessary production dependencies (`node_modules`) and the source code.
+* The container should run as a non-root user for security.
+* Expose port 3000.
+* The final command should be `npm start`.
