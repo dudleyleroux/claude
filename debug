@@ -1,0 +1,24 @@
+You are an expert Python developer with deep knowledge of the Django ORM. I'm hitting an unexpected error.
+
+Context: I have a function that's supposed to fetch a user's profile and their most recent order. The `User` and `Order` models are linked with a foreign key.
+
+The Code:
+def get_user_with_last_order(user_id):
+  try:
+    user = User.objects.get(pk=user_id)
+    # This next line is causing the error
+    last_order = user.orders.latest('created_at')
+    return (user, last_order)
+  except User.DoesNotExist:
+    return (None, None)
+  except Order.DoesNotExist:
+    # This block is meant to handle users with no orders
+    return (user, None)
+
+The Error:
+Instead of returning `(user, None)` for users with no orders, the `user.orders.latest('created_at')` line is throwing an `Order.DoesNotExist` exception that isn't being caught by my second `except` block.
+
+Your Task:
+1. Explain exactly why the `Order.DoesNotExist` exception is not being caught as I intended.
+2. Provide the corrected version of the function that correctly handles users with no orders.
+3. Briefly explain why your fix works.
