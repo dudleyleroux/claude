@@ -1,0 +1,9 @@
+I'm working in a Go project. Write a function named `GenerateSlug` that takes a string (e.g., "My New Blog Post!") and converts it into a URL-friendly slug (e.g., "my-new-blog-post").
+
+Acceptance Criteria:
+1.  It must convert the input string to lowercase.
+2.  It must replace all spaces with hyphens.
+3.  It must remove any characters that are not lowercase letters, numbers, or hyphens.
+4.  Add Go doc comments explaining what the function does, its parameters, and what it returns.
+
+Also, write three distinct table-driven unit tests for this function in a separate `_test.go` file. Cover a standard case, a case with extra spaces, and a case with special characters.
